@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trade With Purab</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  background:#000;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* 🔥 Animated Border Card */
+.glow-card{
+  position:relative;
+  width:340px;
+  padding:25px;
+  border-radius:20px;
+  background:#0b0f1a;
+  color:#fff;
+  text-align:center;
+  overflow:hidden;
+}
+
+.glow-card::before{
+  content:"";
+  position:absolute;
+  inset:-3px;
+  background:linear-gradient(
+    90deg,
+    #ff00ff,
+    #00ffff,
+    #00ff6a,
+    #ff9900,
+    #ff00ff
+  );
+  background-size:400%;
+  animation:borderMove 6s linear infinite;
+  z-index:-1;
+}
+
+@keyframes borderMove{
+  0%{background-position:0%}
+  100%{background-position:400%}
+}
+
+/* 🔥 Logo Glow */
+.logo-wrap{
+  width:120px;
+  height:120px;
+  margin:0 auto 15px;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:radial-gradient(circle, #00ffff, transparent 60%);
+  animation:pulse 2.5s infinite;
+}
+
+.logo-wrap img{
+  width:90px;
+  border-radius:50%;
+}
+
+@keyframes pulse{
+  0%{box-shadow:0 0 10px #00ffff}
+  50%{box-shadow:0 0 30px #00ffff}
+  100%{box-shadow:0 0 10px #00ffff}
+}
+
+h1{
+  font-size:22px;
+  margin-bottom:6px;
+}
+
+.sub{
+  font-size:13px;
+  opacity:0.8;
+  margin-bottom:10px;
+}
+
+.live{
+  color:#00ff6a;
+  margin-bottom:18px;
+}
+
+/* 🔥 Animated Button */
+.join-btn{
+  display:block;
+  text-decoration:none;
+  padding:14px;
+  border-radius:30px;
+  color:#000;
+  font-weight:bold;
+  background:linear-gradient(
+    90deg,
+    #00ffff,
+    #00ff6a,
+    #00ffff
+  );
+  background-size:200%;
+  animation:btnMove 2s linear infinite;
+  transition:transform 0.2s ease;
+}
+
+.join-btn:hover{
+  transform:scale(1.05);
+}
+
+@keyframes btnMove{
+  0%{background-position:0%}
+  100%{background-position:200%}
+}
+
+.points{
+  margin-top:15px;
+  font-size:13px;
+  line-height:1.6;
+  opacity:0.9;
+}
+
+.disclaimer{
+  margin-top:10px;
+  font-size:11px;
+  opacity:0.6;
+}
+</style>
+</head>
+
+<body>
+
+<div class="glow-card">
+  
+  <div class="logo-wrap">
+    <img src="logo.png" alt="Logo">
+  </div>
+
+  <h1>TRADE WITH PURAB</h1>
+  <div class="sub">BankNifty · Nifty · Stock Options</div>
+  <div class="live">👥 Live Members: 33856+</div>
+
+  <!-- ✅ Telegram Link Added -->
+  <a href="https://t.me/+slGSEaAdtBA4Mjc1" class="join-btn" target="_blank">
+    Join Telegram +
+  </a>
+
+  <div class="points">
+    • Advanced trading education & strategies<br>
+    • Daily market learning & insights<br>
+    • Trusted trader community
+  </div>
+
+  <div class="disclaimer">
+    Educational purposes only. Market investments are subject to risk.
+  </div>
+
+</div>
+
+</body>
+</html>
